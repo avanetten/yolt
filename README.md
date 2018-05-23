@@ -1,6 +1,6 @@
 # YOLT #
 
-# You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery
+## You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery
 
 YOLT is an extension of the YOLO framework (https://pjreddie.com/darknet/yolov2/) that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
 
@@ -33,28 +33,29 @@ An example training data and image:
 Each line of the .txt file has the format
 
     <object-class> <x> <y> <width> <height>
-    Where x, y, width, and height are relative to the image's width and height.
+    
+Where x, y, width, and height are relative to the image's width and height.
 
 Labels can be created with https://github.com/tzutalin/labelImg, and converted to the appropriate format with the /yolt/scripts/convert.py script.  Also see https://github.com/Guanghan/darknet for an example of YOLO modifications.
 
 
-# Execution #
+## Execution #
 
 ##############################################
-# HELP
+### HELP
 python yolt2.py --help
 
 ##############################################
-# COMPILE (gpu machine)
+### COMPILE (gpu machine)
 python yolt2.py \
 --mode compile
 
 
 ##############################################
-# TRAIN (gpu_machine)
+### TRAIN (gpu_machine)
 
 
-# Boats and planes
+\# e.g.: boats and planes
 python ../scripts/yolt2.py \
 --mode train \
 --outname 3class_boat_plane \
@@ -69,9 +70,9 @@ python ../scripts/yolt2.py \
 --gpu 1
 
 ##############################################
-# VALIDATE (gpu_machine)
+### VALIDATE (gpu_machine)
 
-# test on all: boats, cars, and airplanes with new model
+\# test on all: boats, cars, and airplanes with new model
 cd /raid/local/src/yolt2/results/
 python ../scripts/yolt2.py \
 --mode valid \
@@ -94,10 +95,10 @@ python ../scripts/yolt2.py \
 
 ##############################################
 
-TBD:
+## TBD:
 
-Upload data preparation scripts
-Describe multispectral data handling
-Describle initial results with YOLOv3
-Describle better labeling methods
+1. Upload data preparation scripts
+2. Describe multispectral data handling
+3. Describle initial results with YOLOv3
+4. Describle better labeling methods
 
