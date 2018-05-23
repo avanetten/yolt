@@ -34,7 +34,7 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 6. [Blog5: The Satellite Utility Manifold; Object Detection Accuracy as a Function of Image Resolution
 ](https://medium.com/the-downlinq/the-satellite-utility-manifold-object-detection-accuracy-as-a-function-of-image-resolution-ebb982310e8c)
 
-7. [Blog6: https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
+7. [Blog6: Panchromatic to Multispectral: Object Detection Performance as a Function of Imaging Bands](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
 
 ---
 
