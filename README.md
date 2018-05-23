@@ -108,4 +108,6 @@ python ../scripts/yolt2.py \
 4. Describle better labeling methods
 
 
-### If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOLT](arxiv.org)
+---
+
+_If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOLT](arxiv.org)_
