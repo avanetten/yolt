@@ -2,7 +2,7 @@
 
 ## You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery
 
-![Alt text](/test_images/header.png?raw=true "")
+![Alt text](/test_images/header.jpg?raw=true "")
 
 YOLT is an extension of the [YOLO](https://pjreddie.com/darknet/yolov2/) framework that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
 
