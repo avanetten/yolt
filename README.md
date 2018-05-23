@@ -34,6 +34,7 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 
 7. [Blog6: https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
 
+---
 
 ## Installation #
 
@@ -43,6 +44,7 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 
         nvidia-docker build -t yolt yolt_container /path_to_yolt/docker
     
+---
 
 ## Execution #
 
@@ -62,7 +64,7 @@ python yolt2.py \
 ### TRAIN (gpu_machine)
 
 
-\# e.g.: boats and planes
+\# e.g. boats and planes
 python ../scripts/yolt2.py \
 --mode train \
 --outname 3class_boat_plane \
@@ -78,7 +80,7 @@ python ../scripts/yolt2.py \
 
 ### VALIDATE (gpu_machine)
 
-\# test on all: boats, cars, and airplanes with new model
+\# e.g. test on boats, cars, and airplanes
 cd /raid/local/src/yolt2/results/
 python ../scripts/yolt2.py \
 --mode valid \
@@ -99,6 +101,7 @@ python ../scripts/yolt2.py \
 --gpu 2
 
 
+---
 
 ## TBD #
 
