@@ -4,19 +4,18 @@
 
 YOLT is an extension of the [YOLO](https://pjreddie.com/darknet/yolov2/) framework that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
 
-The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also build a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different forlders.  
+The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also built a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different forlders.  
 An example training data and image: 
 
-/data/images/train1.tif
-/data/labels/train1.txt
+    /data/images/train1.tif
+    /data/labels/train1.txt
 
-Each line of the .txt file has the format
+Each line of the train1.txt file has the format
 
-<object-class> <x> <y> <width> <height>
+    <object-class> <x> <y> <width> <height>
 
-Where x, y, width, and height are relative to the image's width and height.
+Where x, y, width, and height are relative to the image's width and height. Labels can be created with [LabelImg](https://github.com/tzutalin/labelImg), and converted to the appropriate format with the /yolt/scripts/convert.py script.  
 
-Labels can be created with [LabelImg](https://github.com/tzutalin/labelImg), and converted to the appropriate format with the /yolt/scripts/convert.py script.  
 
 ### For more information, see:
 
@@ -36,25 +35,19 @@ Labels can be created with [LabelImg](https://github.com/tzutalin/labelImg), and
 
 7. [Blog6: https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
 
-If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOL](arxiv.org)
 
 
-##############################################
-##############################################
 
 ## Execution #
 
-##############################################
 ### HELP
 python yolt2.py --help
 
-##############################################
 ### COMPILE (gpu machine)
 python yolt2.py \
 --mode compile
 
 
-##############################################
 ### TRAIN (gpu_machine)
 
 
@@ -72,7 +65,6 @@ python ../scripts/yolt2.py \
 --max_batches 60000 \
 --gpu 1
 
-##############################################
 ### VALIDATE (gpu_machine)
 
 \# test on all: boats, cars, and airplanes with new model
@@ -96,12 +88,13 @@ python ../scripts/yolt2.py \
 --gpu 2
 
 
-##############################################
 
-## TBD:
+## TBD #
 
 1. Upload data preparation scripts
 2. Describe multispectral data handling
 3. Describle initial results with YOLOv3
 4. Describle better labeling methods
 
+
+#### If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOL](arxiv.org)
