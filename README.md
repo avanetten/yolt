@@ -105,7 +105,7 @@ Commands should be executed within the docker file.  To run the container (with 
 
 ---
 
-## TBD #
+## To Do #
 1. Include train/test example
 2. Upload data preparation scripts
 3. Describe multispectral data handling
