@@ -35,9 +35,19 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 7. [Blog6: https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
 
 
+## Installation #
 
+1. Install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
+
+2. Build docker file
+        nvidia-docker build -t yolt yolt_container /path_to_yolt/docker
+    
 
 ## Execution #
+
+Commands should be executed within the docker file.  To run the container (with name yolt_train0):
+    nvidia-docker run -it -v --name yolt_train0 yolt_container
+
 
 ### HELP
 python yolt2.py --help
