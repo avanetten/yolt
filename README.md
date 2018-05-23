@@ -106,11 +106,11 @@ python ../scripts/yolt2.py \
 ---
 
 ## TBD #
-
-1. Upload data preparation scripts
-2. Describe multispectral data handling
-3. Describle initial results with YOLOv3
-4. Describle better labeling methods
+1. Include train/test example
+2. Upload data preparation scripts
+3. Describe multispectral data handling
+4. Describle initial results with YOLOv3
+5. Describle better labeling methods
 
 
 ---
