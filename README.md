@@ -2,42 +2,45 @@
 
 ## You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery
 
-YOLT is an extension of the YOLO framework (https://pjreddie.com/darknet/yolov2/) that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
-
-References:
-
-arxiv
-
-https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571
-
-https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-34f72f659588
-
-https://medium.com/the-downlinq/building-extraction-with-yolt2-and-spacenet-data-a926f9ffac4f
-
-https://medium.com/the-downlinq/car-localization-and-counting-with-overhead-imagery-an-interactive-exploration-9d5a029a596b
-
-https://medium.com/the-downlinq/the-satellite-utility-manifold-object-detection-accuracy-as-a-function-of-image-resolution-ebb982310e8c
-
-https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56
-
-If you plan on using YOLT in your work, please consider citing YOLO (https://arxiv.org/abs/1612.08242) and YOLT (arxiv)
-
-
+YOLT is an extension of the [YOLO](https://pjreddie.com/darknet/yolov2/) framework that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
 
 The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also build a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different forlders.  
 An example training data and image: 
 
-        /data/images/train1.tif
-        /data/labels/train1.txt
-        
+/data/images/train1.tif
+/data/labels/train1.txt
+
 Each line of the .txt file has the format
 
-    <object-class> <x> <y> <width> <height>
-    
+<object-class> <x> <y> <width> <height>
+
 Where x, y, width, and height are relative to the image's width and height.
 
-Labels can be created with https://github.com/tzutalin/labelImg, and converted to the appropriate format with the /yolt/scripts/convert.py script.  Also see https://github.com/Guanghan/darknet for an example of YOLO modifications.
+Labels can be created with [LabelImg](https://github.com/tzutalin/labelImg), and converted to the appropriate format with the /yolt/scripts/convert.py script.  
 
+### For more information, see:
+
+1. [arXiv paper: You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery](arxiv.org)
+
+2. [Blog1: You Only Look Twice — Multi-Scale Object Detection in Satellite Imagery With Convolutional Neural Networks (Part I)](https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571)
+
+3. [Blog2: You Only Look Twice (Part II) — Vehicle and Infrastructure Detection in Satellite Imagery](https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-34f72f659588)
+
+4. [Blog3: Building Extraction with YOLT2 and SpaceNet Data](https://medium.com/the-downlinq/building-extraction-with-yolt2-and-spacenet-data-a926f9ffac4f)
+
+5. [Blog4: Car Localization and Counting with Overhead Imagery, an Interactive Exploration
+](https://medium.com/the-downlinq/car-localization-and-counting-with-overhead-imagery-an-interactive-exploration-9d5a029a596b)
+
+6. [Blog5: The Satellite Utility Manifold; Object Detection Accuracy as a Function of Image Resolution
+](https://medium.com/the-downlinq/the-satellite-utility-manifold-object-detection-accuracy-as-a-function-of-image-resolution-ebb982310e8c)
+
+7. [Blog6: https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56](https://medium.com/the-downlinq/panchromatic-to-multispectral-object-detection-performance-as-a-function-of-imaging-bands-51ecaaa3dc56)
+
+If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOL](arxiv.org)
+
+
+##############################################
+##############################################
 
 ## Execution #
 
