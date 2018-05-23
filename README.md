@@ -4,8 +4,7 @@
 
 YOLT is an extension of the [YOLO](https://pjreddie.com/darknet/yolov2/) framework that can evaluation satellite images of arbitrary size, and runs at ~50 frames per second.
 
-The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also built a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different forlders.  
-An example training data and image: 
+The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also built a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different forlders.  An example training data and image: 
 
     /data/images/train1.tif
     /data/labels/train1.txt
@@ -97,4 +96,4 @@ python ../scripts/yolt2.py \
 4. Describle better labeling methods
 
 
-#### If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOL](arxiv.org)
+### If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOLT](arxiv.org)
