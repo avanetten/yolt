@@ -56,51 +56,51 @@ Commands should be executed within the docker file.  To run the container (with 
 
 
 ### HELP
-python yolt2.py --help
+    python yolt2.py --help
 
 ### COMPILE (gpu machine)
-python yolt2.py \
---mode compile
+    python yolt2.py \
+        --mode compile
 
 
 ### TRAIN (gpu_machine)
 
 
-\# e.g. boats and planes
-python ../scripts/yolt2.py \
---mode train \
---outname 3class_boat_plane \
---object_labels_str  boat,boat_harbor,airplane \
---cfg_file ave_13x13.cfg  \
---nbands 3 \
---weight_file ave_13x13_boats_planes_voc.weights \
---train_images_list_file boat_airplane_all.txt \
---single_gpu_machine 0 \
---keep_valid_slices False \
---max_batches 60000 \
---gpu 1
+    \# e.g. boats and planes
+    python ../scripts/yolt2.py \
+        --mode train \
+        --outname 3class_boat_plane \
+        --object_labels_str  boat,boat_harbor,airplane \
+        --cfg_file ave_13x13.cfg  \
+        --nbands 3 \
+        --weight_file ave_13x13_boats_planes.weights \
+        --train_images_list_file boat_airplane_all.txt \
+        --single_gpu_machine 0 \
+        --keep_valid_slices False \
+        --max_batches 60000 \
+        --gpu 0
 
 ### VALIDATE (gpu_machine)
 
-\# e.g. test on boats, cars, and airplanes
-cd /raid/local/src/yolt2/results/
-python ../scripts/yolt2.py \
---mode valid \
---outname qgis_labels_all_boats_planes_cars_buffer \
---object_labels_str airplane,airport,boat,boat_harbor,car \
---cfg_file ave_26x26.cfg \
---valid_weight_dir train_cowc_cars_qgis_boats_planes_cfg=ave_26x26_2017_11_28_23-11-36 \
---weight_file ave_26x26_30000_tmp.weights \
---valid_testims_dir qgis_validation/all \
---keep_valid_slices False \
---valid_make_pngs True \
---valid_make_legend_and_title False \
---edge_buffer_valid 1 \
---valid_box_rescale_frac 1 \
---plot_thresh_str 0.4 \
---slice_sizes_str 416 \
---slice_overlap 0.2 \
---gpu 2
+    \# e.g. test on boats, cars, and airplanes
+    cd /raid/local/src/yolt2/results/
+    python ../scripts/yolt2.py \
+        --mode valid \
+        --outname qgis_labels_all_boats_planes_cars_buffer \
+        --object_labels_str airplane,airport,boat,boat_harbor,car \
+        --cfg_file ave_26x26.cfg \
+        --valid_weight_dir train_cowc_cars_qgis_boats_planes_cfg=ave_26x26_2017_11_28_23-11-36 \
+        --weight_file ave_26x26_30000_tmp.weights \
+        --valid_testims_dir qgis_validation/all \
+        --keep_valid_slices False \
+        --valid_make_pngs True \
+        --valid_make_legend_and_title False \
+        --edge_buffer_valid 1 \
+        --valid_box_rescale_frac 1 \
+        --plot_thresh_str 0.4 \
+        --slice_sizes_str 416 \
+        --slice_overlap 0.2 \
+        --gpu 2
 
 
 ---
@@ -110,7 +110,7 @@ python ../scripts/yolt2.py \
 2. Upload data preparation scripts
 3. Describe multispectral data handling
 4. Describle initial results with YOLOv3
-5. Describle better labeling methods
+5. Describe improve labeling methods
 
 
 ---
