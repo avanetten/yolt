@@ -56,9 +56,11 @@ Commands should be executed within the docker file.  To run the container (with 
 
 
 ### HELP
+    cd /path_to_yolt/scripts
     python yolt2.py --help
 
 ### COMPILE (gpu machine)
+    cd /path_to_yolt/scripts
     python yolt2.py \
         --mode compile
 
@@ -66,14 +68,14 @@ Commands should be executed within the docker file.  To run the container (with 
 ### TRAIN (gpu_machine)
 
 
-    \# e.g. boats and planes
-    python ../scripts/yolt2.py \
+    \# e.g. train boats and planes
+    cd /path_to_yolt/scripts
+    python yolt2.py \
         --mode train \
         --outname 3class_boat_plane \
         --object_labels_str  boat,boat_harbor,airplane \
         --cfg_file ave_13x13.cfg  \
         --nbands 3 \
-        --weight_file ave_13x13_boats_planes.weights \
         --train_images_list_file boat_airplane_all.txt \
         --single_gpu_machine 0 \
         --keep_valid_slices False \
@@ -83,8 +85,8 @@ Commands should be executed within the docker file.  To run the container (with 
 ### VALIDATE (gpu_machine)
 
     \# e.g. test on boats, cars, and airplanes
-    cd /raid/local/src/yolt2/results/
-    python ../scripts/yolt2.py \
+    cd /path_to_yolt/scripts
+    python yolt2.py \
         --mode valid \
         --outname qgis_labels_all_boats_planes_cars_buffer \
         --object_labels_str airplane,airport,boat,boat_harbor,car \
