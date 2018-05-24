@@ -68,7 +68,7 @@ Commands should be executed within the docker file.  To run the container (with 
 ### TRAIN (gpu_machine)
 
 
-    \# e.g. train boats and planes
+    # e.g. train boats and planes
     cd /path_to_yolt/scripts
     python yolt2.py \
         --mode train \
@@ -84,7 +84,7 @@ Commands should be executed within the docker file.  To run the container (with 
 
 ### VALIDATE (gpu_machine)
 
-    \# e.g. test on boats, cars, and airplanes
+    # e.g. test on boats, cars, and airplanes
     cd /path_to_yolt/scripts
     python yolt2.py \
         --mode valid \
