@@ -20,7 +20,7 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 
 ### For more information, see:
 
-1. [arXiv paper: You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery](arxiv.org)
+1. [arXiv paper: You Only Look Twice: Rapid Multi-Scale Object Detection In Satellite Imagery](https://arxiv.org/abs/1805.09512)
 
 2. [Blog1: You Only Look Twice — Multi-Scale Object Detection in Satellite Imagery With Convolutional Neural Networks (Part I)](https://medium.com/the-downlinq/you-only-look-twice-multi-scale-object-detection-in-satellite-imagery-with-convolutional-neural-38dad1cf7571)
 
@@ -117,4 +117,4 @@ Commands should be executed within the docker file.  To run the container (with 
 
 ---
 
-_If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOLT](arxiv.org)_
+_If you plan on using YOLT in your work, please consider citing [YOLO](https://arxiv.org/abs/1612.08242) and [YOLT](https://arxiv.org/abs/1805.09512)_
