@@ -66,7 +66,7 @@ The following has been tested on Ubuntu 16.04.2
 
 Commands should be executed within the docker file.  To run the container (with name yolt_train0):
 
-    nvidia-docker run -it -v --name yolt_train0 yolt_docker_names
+    nvidia-docker run -it -v --name yolt_train0 yolt_docker_name
 
 
 ### HELP
