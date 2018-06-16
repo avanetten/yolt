@@ -51,8 +51,8 @@ The following has been tested on Ubuntu 16.04.2
 3. Launch the docker container
 
         nvidia-docker run -it -v /raid:/raid yolt_docker_name
-           ('/raid' is the root directory of your machine, which will
-           be shared with the docker container)
+        # '/raid' is the root directory of your machine, which will
+        # be shared with the docker container
 
 4. Run Makefile
 
