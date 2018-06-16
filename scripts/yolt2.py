@@ -313,14 +313,6 @@ def init_args():
     args.figsize = (12,12)
     args.dpi = 300
     
-    ## initialize val files to empty
-    #figname_val = ''#results_dir + valid_image + '_valid_thresh=' + str(plot_thresh) + '.png'
-    #pkl_val = ''#results_dir + valid_image + '_boxes_thresh=' + str(plot_thresh) + '.pkl'
-    #valid_image = ''
-    #valid_im,  valid_files, valid_results_files = [],[],[]
-    #valid_dir, valid_files_txt = '', ''
-    ###########################
-    
     return args
 
 ###############################################################################
