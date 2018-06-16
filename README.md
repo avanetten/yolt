@@ -73,7 +73,8 @@ Commands should be executed within the docker file.  To run the container (with 
     cd /path_to_yolt/scripts
     python yolt2.py --help
 
-### COMPILE (gpu machine)
+### COMPILE (gpu machine) 
+    # This simply reruns the 'make' command via python
     cd /path_to_yolt/scripts
     python yolt2.py \
         --mode compile
