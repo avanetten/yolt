@@ -4,7 +4,7 @@
 
 ![Alt text](/test_images/header.jpg?raw=true "")
 
-YOLT is an extension of the [YOLO](https://pjreddie.com/darknet/yolov2/) framework that can evaluate satellite images of arbitrary size, and runs at ~50 frames per second.  Current applications include vechicle detection (cars, airplanes, boats), building detection, and airport detection.
+YOLT is an extension of the [YOLO v2](https://pjreddie.com/darknet/yolov2/) framework that can evaluate satellite images of arbitrary size, and runs at ~50 frames per second.  Current applications include vechicle detection (cars, airplanes, boats), building detection, and airport detection.
 
 The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also built a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different directories.  For example: 
 
@@ -40,26 +40,41 @@ Where x, y, width, and height are relative to the image's width and height. Labe
 
 ## Installation #
 
+The following has been tested on Ubuntu 16.04.2
+
 1. Install [nvidia-docker](https://github.com/NVIDIA/nvidia-docker)
 
 2. Build docker file
 
-        nvidia-docker build -t yolt yolt_container /path_to_yolt/docker
-    
+        nvidia-docker build -t yolt yolt_docker_name /path_to_yolt/docker
+
+3. Launch the docker container
+
+        nvidia-docker run -it -v /raid:/raid yolt_docker_name
+        # '/raid' is the root directory of your machine, which will
+        # be shared with the docker container
+
+4. Run Makefile
+
+        cd /path_to_yolt/
+        make clean
+        make
+        
 ---
 
 ## Execution #
 
 Commands should be executed within the docker file.  To run the container (with name yolt_train0):
 
-    nvidia-docker run -it -v --name yolt_train0 yolt_container
+    nvidia-docker run -it -v --name yolt_train0 yolt_docker_name
 
 
 ### HELP
     cd /path_to_yolt/scripts
     python yolt2.py --help
 
-### COMPILE (gpu machine)
+### COMPILE (gpu machine) 
+    # This simply reruns the 'make' command via python
     cd /path_to_yolt/scripts
     python yolt2.py \
         --mode compile
@@ -111,7 +126,7 @@ Commands should be executed within the docker file.  To run the container (with 
 1. Include train/test example
 2. Upload data preparation scripts
 3. Describe multispectral data handling
-4. Describle initial results with YOLOv3
+4. Describle initial results with YOLO v3
 5. Describe improve labeling methods
 
 
