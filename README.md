@@ -83,7 +83,7 @@ Commands should be executed within the docker file.  To run the container (with 
         --mode train \
         --outname 3class_boat_plane \
         --object_labels_str  boat,boat_harbor,airplane \
-        --cfg_file ave_13x13.cfg  \
+        --cfg_file ave_standard.cfg  \
         --nbands 3 \
         --train_images_list_file boat_airplane_all.txt \
         --single_gpu_machine 0 \
@@ -99,9 +99,9 @@ Commands should be executed within the docker file.  To run the container (with 
         --mode valid \
         --outname qgis_labels_all_boats_planes_cars_buffer \
         --object_labels_str airplane,airport,boat,boat_harbor,car \
-        --cfg_file ave_26x26.cfg \
+        --cfg_file ave_standard.cfg \
         --valid_weight_dir train_cowc_cars_qgis_boats_planes_cfg=ave_26x26_2017_11_28_23-11-36 \
-        --weight_file ave_26x26_30000_tmp.weights \
+        --weight_file ave_standard_30000_tmp.weights \
         --valid_testims_dir qgis_validation/all \
         --keep_valid_slices False \
         --valid_make_pngs True \
