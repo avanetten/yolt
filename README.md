@@ -4,6 +4,10 @@
 
 ![Alt text](/test_images/header.jpg?raw=true "")
 
+
+### As of 24 October 2018 YOLT has been superceded by [SIMRDWN](https://github.com/CosmiQ/simrdwn) 
+
+
 YOLT is an extension of the [YOLO v2](https://pjreddie.com/darknet/yolov2/) framework that can evaluate satellite images of arbitrary size, and runs at ~50 frames per second.  Current applications include vechicle detection (cars, airplanes, boats), building detection, and airport detection.
 
 The YOLT code alters a number of the files in src/*.c to allow further functionality.  We also built a python wrapper around the C functions to improve flexibility.  We utililize the default data format of YOLO, which places images and labels in different directories.  For example: 
